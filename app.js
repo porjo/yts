@@ -6,8 +6,9 @@ const over20UploadDate = "CAISAhgC";
 
 $(function(){
 
-	$("#go-button").click(function() {
+	var search = function() {
 		var keyword = $("#keyword").val();
+		if (keyword === "") { return; }
 		var over20 = $("#over20").is(":checked");
 		var dateSort = $("#dateSort").is(":checked");
 
@@ -29,5 +30,12 @@ $(function(){
 		}
 		//console.log(url);
 		window.open(url);
+	};
+	$("#keyword").focus();
+	$("#keyword").on("keypress",function(e) {
+		if(e.which == 13) {
+			search();
+		}
 	});
+	$("#go-button").click(search);
 });
