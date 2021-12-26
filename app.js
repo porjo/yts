@@ -29,7 +29,8 @@ $(function(){
 			}
 		}
 		//console.log(url);
-		window.open(url);
+		//window.open(url);
+		window.open(url,"_self");
 	};
 	$("#keyword").focus();
 	$("#keyword").on("keypress",function(e) {
@@ -38,4 +39,8 @@ $(function(){
 		}
 	});
 	$("#go-button").click(search);
+
+	$(".deleteicon").click(function() {
+		$("#keyword").val('');
+	});
 });
