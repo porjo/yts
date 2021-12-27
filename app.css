@@ -190,12 +190,10 @@ label {
 	-o-transition: All 0.3s ease;
 }
 
-span.deleteicon {
+.deleteicon {
 	position: relative;
-	display: inline-flex;
-	align-items: center;
 }
-span.deleteicon span {
+.deleteicon span {
 	position: absolute;
 	display: block;
 	right: 3px;
@@ -208,8 +206,9 @@ span.deleteicon span {
 	text-align: center;
 	line-height: 1em;
 	cursor: pointer;
+	top: calc(50% - 7px);
 }
-span.deleteicon input {
+.deleteicon input {
 	padding-right: 18px;
 	box-sizing: border-box;
 }
